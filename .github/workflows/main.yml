@@ -36,3 +36,6 @@ jobs:
         with:
           # The Command which should be run
           cmd: yq e '.proxy.image.tag = "v1.0.0"' -i sample.yaml
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
