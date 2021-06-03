@@ -23,9 +23,9 @@ proxy:
   image:
     name: reverse-proxy
     pullPolicy: IfNotPresent
-    tag: "aaaa"
+    tag: "v1.0.0"
 server:
   image:
     name: reverse-proxy
     pullPolicy: IfNotPresent
-    tag: "bb"
+    tag: "v1.0.0"
