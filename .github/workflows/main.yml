@@ -34,7 +34,8 @@ jobs:
         uses: mikefarah/yq@v4.9.3
         with:
           # The Command which should be run
-          cmd: yq e '.proxy.image.tag = "v1.0.0"' -i a/sample.yaml \
+          cmd: |-
+            yq e '.proxy.image.tag = "v1.0.0"' -i a/sample.yaml
             yq e '.proxy.image.tag = "end"' -i a/sample.yaml
 
       - name: Create Pull Request
