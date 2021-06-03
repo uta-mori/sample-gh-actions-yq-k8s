@@ -23,4 +23,9 @@ proxy:
   image:
     name: reverse-proxy
     pullPolicy: IfNotPresent
-    tag: "sample"
+    tag: "aaaa"
+server:
+  image:
+    name: reverse-proxy
+    pullPolicy: IfNotPresent
+    tag: "bb"
