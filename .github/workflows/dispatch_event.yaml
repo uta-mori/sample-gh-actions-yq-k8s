@@ -12,3 +12,7 @@ jobs:
       - run: echo "exec repository dispatch event."
       - run: echo ${{ github.event.client_payload.reviewer }}
       - run: echo ${{ github.event.client_payload.auto }}
+      - if: ${{ github.event.client_payload.auto }} == true
+        run: echo ${{ github.event.client_payload.auto }}
+      - if: ${{ github.event.client_payload.auto }}
+        run: echo ${{ github.event.client_payload.auto }}
