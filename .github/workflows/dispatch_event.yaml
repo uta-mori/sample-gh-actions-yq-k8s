@@ -2,12 +2,13 @@ name: repository dispatch event sample
 
 on:
   repository_dispatch:
-    types: [apple, orange]
+    types: [apple]
 
 jobs:
   hoge:
     runs-on: ubuntu-latest
     steps:
+      - run: ${{ toJson(github.event.client_payload) }}
       - run: echo "exec repository dispatch event."
       - run: echo ${{ github.event.client_payload.reviewer }}
       - run: echo ${{ github.event.client_payload.auto }}
