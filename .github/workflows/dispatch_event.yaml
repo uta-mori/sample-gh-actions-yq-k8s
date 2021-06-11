@@ -8,7 +8,6 @@ jobs:
   hoge:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
       - run: echo "exec repository dispatch event."
       - run: echo ${{ github.event.client_payload.reviewer }}
       - run: echo ${{ github.event.client_payload.auto }}
