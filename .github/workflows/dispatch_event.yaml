@@ -13,5 +13,5 @@ jobs:
       - run: echo ${{ github.event.client_payload.auto }}
       - if: ${{ github.event.client_payload.auto }} == 'true'
         run: echo == $github.event.client_payload.auto
-      - if: ! $github.event.client_payload.auto
+      - if: $github.event.client_payload.auto
         run: echo そのまんま${{ github.event.client_payload.auto }}
