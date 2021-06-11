@@ -12,8 +12,8 @@ jobs:
       - run: echo ${{ github.event.client_payload.reviewer }}
       - run: echo ${{ github.event.client_payload.auto }}
       - name: if please
-        if: ${{ github.event.client_payload.auto }} == 'please'
+        if: github.event.client_payload.auto == 'please'
         run: echo == ${{ github.event.client_payload.auto }}
       - name: if exits
-        if: ${{ github.event.client_payload.auto }}
+        if: github.event.client_payload.auto
         run: echo そのまんま${{ github.event.client_payload.auto }}
