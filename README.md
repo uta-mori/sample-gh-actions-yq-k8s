@@ -17,6 +17,6 @@ $ export TOKEN=xxxxxxxxxxxxxxxxxxx
 // (A)の解除
 $ unset HISTIGNORE
 
-$ curl -X POST -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.everest-preview+json" --data '{"event_type": "apple","reviewer":"you", "auto": true }' https://api.github.com/repos.uta-mori/sample-gh-actions-yq-k8s/dispatches
+$ curl -X POST -H "Authorization: token $TOKEN" -H "Accept: application/vnd.github.everest-preview+json" --data '{"event_type": "apple","client_payload": {"reviewer":"you", "auto": true}}' https://api.github.com/repos/uta-mori/sample-gh-actions-yq-k8s/dispatches
 
 ```
